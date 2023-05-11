@@ -1,0 +1,83 @@
+[
+    {
+      "_id": "e2f917f4-b341-4c6f-ab9d-b099093e31b5",
+      "name": "Margery",
+      "image": "Ryan",
+      "category": "hdf",
+      "inStock": false,
+      "price": 51.19,
+      "quantity": 64
+    },
+    {
+      "_id": "5694fa98-d4ac-490d-8551-ce553b1da030",
+      "name": "Gould",
+      "image": "Mays",
+      "category": "hdf",
+      "inStock": false,
+      "price": 65.76,
+      "quantity": 46
+    },
+    {
+      "_id": "dc5f0aae-5a01-4f7e-a14b-b167ea550913",
+      "name": "Tanner",
+      "image": "Reyes",
+      "category": "mdf",
+      "inStock": false,
+      "price": 60.99,
+      "quantity": 62
+    },
+    {
+      "_id": "2c6eaf57-bdff-4194-9087-d7111a4d677e",
+      "name": "Cantu",
+      "image": "Wheeler",
+      "category": "mdf",
+      "inStock": false,
+      "price": 62.94,
+      "quantity": 46
+    },
+    {
+      "_id": "f124e29b-df52-424a-a255-6e5827581944",
+      "name": "Kane",
+      "image": "Mathews",
+      "category": "hdf",
+      "inStock": true,
+      "price": 78.76,
+      "quantity": 11
+    },
+    {
+      "_id": "bc9b5b31-11b7-48d8-b79d-2fca77d55816",
+      "name": "Kathy",
+      "image": "Holt",
+      "category": "hdf",
+      "inStock": true,
+      "price": 26.72,
+      "quantity": 80
+    },
+    {
+      "_id": "6474f3fe-b50f-4be3-9f03-0f50e879ca38",
+      "name": "Ines",
+      "image": "Miles",
+      "category": "hdf",
+      "inStock": true,
+      "price": 42.96,
+      "quantity": 29
+    },
+    {
+      "_id": "bba306cb-8c74-417f-aa36-dde1c4b6d19f",
+      "name": "Ruby",
+      "image": "Sanders",
+      "category": "hdf",
+      "inStock": true,
+      "price": 47.61,
+      "quantity": 68
+    },
+    {
+      "_id": "34f114dc-5f77-4d51-aca3-4c16d877fe73",
+      "name": "Huber",
+      "image": "Alvarado",
+      "category": "marine",
+      "inStock": true,
+      "price": 47.34,
+      "quantity": 74
+    }
+  ]
