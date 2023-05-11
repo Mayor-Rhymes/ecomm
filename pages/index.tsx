@@ -29,7 +29,7 @@ interface ProductProps{
 
 export const getServerSideProps: GetServerSideProps = async ({params}) => {
     
-       const response = await axios.get(`/api/products`);
+       const response = await axios.get(`https://${NEXT_PUBLIC_API_URL}/api/products`);
       
 
        if(response.status !== 200) {
