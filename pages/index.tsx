@@ -31,7 +31,22 @@ export const getServerSideProps: GetServerSideProps = async ({params}) => {
     
        const response = await axios.get("http://localhost:3000/api/products");
       
+
+       if(response.status !== 200) {
+
+          const {message} = response.data
+          const products: IProduct[] = []
+          return {
+
+            props: {
+               products
+            }
+          }
+       }
+
        const {products} = response.data
+
+
 
        return {
         props: {
@@ -46,9 +61,25 @@ export default function Home({products}: ProductProps) {
 
 
 
+  if(products.length == 0) {
+
+    return (<main className="flex flex-col items-center justify-between bg-white">
+    
+
+      {/* {products?.map((product) => (
+        <Product key={product.id} product={product} />
+      ))} */}
+
+      <h3 className="text-6xl text-center my-10">There is no Product</h3>
+
+
+    
+  </main>)
+  }
   return (
     <main className="flex flex-col items-center justify-between bg-white">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 place-content-center py-">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 place-content-center">
+
         {products?.map((product) => (
           <Product key={product.id} product={product} />
         ))}

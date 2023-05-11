@@ -16,7 +16,7 @@ export default async function handler(
 
         if(!products) return res.status(404).json({message: "You are not authorized to access this data"})
 
-        if(products.length == 0) return res.status(200).json({message: "You have no products"})
+        if(products.length == 0) return res.status(201).json({message: "You have no products"})
 
         res.status(200).json({message: "Products fetched successfully", products})
 

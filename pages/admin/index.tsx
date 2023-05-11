@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 export interface Product {
   image: string;
@@ -14,7 +15,16 @@ export interface Product {
 const CreateProduct = () => {
   const categories = ["mdf", "hdf", "marine"];
 
-  const [product, setProduct] = useState({} as Product);
+  const [product, setProduct] = useState({
+
+    image: "",
+    category: categories[0],
+    name: "",
+    inStock: true,
+    price: 0,
+    quantity: 0
+  } as Product);
+  const router = useRouter();
 
   const handleChange = (key: string, value: string) => {
     setProduct(
@@ -38,7 +48,8 @@ const CreateProduct = () => {
           }
         );
         if (response.status === 200) {
-          toast.success("Product Create");
+          toast.success("Product Created");
+          router.push("/");
         } else {
           toast.error("Product Creation Failed");
         }
@@ -69,11 +80,21 @@ const CreateProduct = () => {
         }
         className="h-[50px] border-2 border-blue-100 outline-none placeholder-blue-400 focus:border-blue-400"
       >
-        {categories.map((category, index) => (
-          <option value={category} key={index}>
-            {category}
-          </option>
-        ))}
+        {categories.map((category, index) => {
+          if (category == "mdf") {
+            return (
+              <option value={category} key={index} selected>
+                {category}
+              </option>
+            );
+          } else {
+            return (
+              <option value={category} key={index}>
+                {category}
+              </option>
+            );
+          }
+        })}
       </select>
 
       <div className="flex justify-between">

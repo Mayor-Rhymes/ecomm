@@ -31,11 +31,11 @@ const Navbar = () => {
             (<span className="snipcart-items-count">{0}</span>)
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="" className="text-white bg-blue-400 p-4 rounded-xl hover:bg-red-400 transition-all">
             Login/Signup
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
